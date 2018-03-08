@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<!-- taken from: http://code.google.com/apis/maps/documentation/javascript/examples/map-simple.html -->
+  <head>
+    <title>Google Maps JavaScript API v3 Example: Map Simple</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <style type="text/css">
+      html, body, #map_canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script type="text/javascript">
+      var map;
+
+      // this is the function to initialise the map when the page loads - it is called by the 'addDomListener' call below
+      function initialize() {
+			// set up startup options for the map - which zoom level, which locaiton should the map be centered on
+			// and which basemap type should appear
+			var myOptions = {
+			  zoom: 14,
+			  center: new google.maps.LatLng(51.52, -0.13417),
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			// create the new map
+			map = new google.maps.Map(document.getElementById('map_canvas'),
+				myOptions);
+
+			// create a new point to add on the map, using the organisations.png icon
+			var image = 'organisations.png';
+			var myLatLng = new google.maps.LatLng(51.524578916490455, -0.13406753540039062);
+			var beachMarker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image
+			});
+
+			// set the text contents of the popup
+		   var contentString = 'Begin your journey here';
+
+			// create a default info window pop-up (supplied by Google)
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+
+			// add a listener onto the point so that it responds to a click event
+			google.maps.event.addListener(beachMarker, 'click', function() {
+			  infowindow.open(map,beachMarker);
+			});
+
+			// add a listener so that when the user clicks on the map the
+			// clicked point is added to the text boxes
+			// document.getElementById allows you to set values for each text box using its ID
+			google.maps.event.addListener(map, 'click', function(point) {
+					document.getElementById("latitude").value = point.latLng.lat();
+					document.getElementById("longitude").value = point.latLng.lng();
+				});
+      } // end of the initialize function
+
+	  // call the initialize method to create the map
+	  // this listener is called when the window is first loaded
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas" style="width:60%;float:left"></div>
+    <div id="lat_lng" style="width:40%;float:right">
+	<form action="haithamquiz_processCoords.php" method="post">
+		Latitude: <input type="text" name="latitude" id="latitude" /><br />
+		Longitude: <input type="text" name="longitude" id="longitude"  /><br />
+		Question: <input type="text" name="question" id="question" /><br />
+		Answer A: <input type="text" name="Answer A" id="Answer_A" /><br />
+		Answer B: <input type="text" name="Answer B" id="Answer_B" /><br />
+        Answer C: <input type="text" name="Answer C" id="Answer_C" /><br />
+        Answer D: <input type="text" name="Answer D" id="Answer_D" /><br />
+        Correct Ans : <input type="text" name="Correct_Ans" id="Correct_Ans" /><br />
+		<input type="submit" value="Submit" />
+	</form>
+    </div><!-- end of the lat-lng div -->
+  </head>
+  </body>
+</html>
+
+
