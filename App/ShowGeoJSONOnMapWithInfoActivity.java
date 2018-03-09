@@ -1,10 +1,7 @@
 package uk.ac.ucl.cege.cegeg077.zceshel.mapsexample;
 //=============================
 
-//Note that code in this file has been adapted from: https://github.com/googlemaps/android-maps-utils/blob/master/demo/src/com/google/maps/android/utils/demo/GeoJsonDemoActivity.java
-//This code has been readapted from Claire Ellul by Haitham El Mengad
-//This activity is the first to appear when the app is launched: the user sees a map centered on UCL
-//The start-point is defined by a blue marker on the map
+
 //The quiz locations are uploaded from GeoJSON and are represented by red markers on the map
 //When the user clicks on a red marker the question appears in a text box above the marker asking
 //to come closer

@@ -1,8 +1,6 @@
 package uk.ac.ucl.cege.cegeg077.zceshel.mapsexample;
 
-// Code in this App is partially adapted from this source: http://www.xyzws.com/javafaq/how-to-use-httpurlconnection-post-data-to-web-server/139
-// Accessed 27th December 2015 by Claire Ellul
-// Adapted from Claire Ellul by Haitham El Mengad 2/05/2017
+
 // This activity prompts the user to enter his/her name and
 // to select an answer choice for the question (view lay-out)
 // It then sends the information to the UCL server: http://node01.geospatial.ucl.ac.uk/teaching/user42/process_form.php

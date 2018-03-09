@@ -1,10 +1,6 @@
 package uk.ac.ucl.cege.cegeg077.zceshel.mapsexample;
 
-// NB ALL THE CODE HERE ADAPTED FROM
-// package com.javacodegeeks.android.lbs;
-// http://www.javacodegeeks.com/2011/01/android-proximity-alerts-tutorial.html
-// Re-adapted from package uk.ac.ucl.ucfscde.proximtysensor by Claire Ellul 26/12/2015
-// Adapted from Claire Ellul by Haitham El Mengad 02/05/2017
+
 // This is the activity that launches upon clicking on the blue marker (ShowGeoJSonOnMapWithInfoActivity)
 // The activity tracks the location of the user and the distance to the quiz location
 // It displays the distance between the user and the quiz location (see layout)

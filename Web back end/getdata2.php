@@ -1,5 +1,5 @@
    <?php 
-        $db = pg_connect('host=localhost user=user41 port=5432 dbname=user41db password=user41password');
+        $db = pg_connect('host=localhost user=user42 port=5432 dbname=user42db password=user42password');
 
 		//$latitude = $_REQUEST['latitude'];
 		//$longitude = $_REQUEST['lognitude'];

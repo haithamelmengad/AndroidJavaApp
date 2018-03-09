@@ -50,7 +50,6 @@ $coords ="ST_geomfromtext('POINT(".$latitude." ".$longitude.")')";
 the general form of this statement is as follows:
 
 insert into personCoords (name, surname, university, coords) values
-('Claire','Ellul','UCL',ST_geomfromtext('POINT(22.33 87.33)'));
 */
 
 $query = "insert into questionsTable (question, Answer_A, Answer_B, Answer_C, Answer_D, Correct_Ans, pointcoords) values (";

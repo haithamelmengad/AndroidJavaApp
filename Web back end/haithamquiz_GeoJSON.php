@@ -2,10 +2,7 @@
 
 /* This script retrieves data from the quizquestions table in the user42 database on the CEGE developer server. This data is then outputed as a geoJSON file, which
 is downloaded by the phone based app.
-
-Note: This code is adapted from Ellul, C (2017) "createGeoJSON.php", UCL, London. 
-Accessed at: https://moodle.ucl.ac.uk/pluginfile.php/3322733/mod_folder/content/0/createGeoJSON.php?forcedownload=1
-Accessed on: 20.03.17 */
+ */
                                                                          
     // connect to the PostGreSQL database
     // remember that variables in php are named with a $ as the first character
